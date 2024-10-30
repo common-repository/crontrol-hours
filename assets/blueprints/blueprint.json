@@ -1,0 +1,28 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "landingPage": "/wp-admin/tools.php?page=crontrol-hours",
+    "preferredVersions": {
+        "php": "latest",
+        "wp": "latest"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "login": true,
+    "steps": [{
+        "step": "setSiteOptions",
+        "options": {
+            "blogname": "Crontrol Hours Demo",
+            "blogdescription": "Demonstrating the plugin called Crontrol Hours"
+        }
+    }, {
+        "step": "installPlugin",
+        "pluginZipFile": {
+            "resource": "wordpress.org/plugins",
+            "slug": "crontrol-hours"
+        },
+        "options": {
+            "activate": true
+        }
+    }]
+}
